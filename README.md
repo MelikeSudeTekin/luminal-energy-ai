@@ -90,7 +90,6 @@ OpenAI API anahtarı yapılandırıldığında sistem gerçek yapay zeka yanıtl
 
 ## Proje Yapısı
 
-```text
 luminal-energy-ai/
 │
 ├── public/
@@ -104,6 +103,8 @@ luminal-energy-ai/
 ├── .env.example
 ├── .gitignore
 └── README.md
+
+## Çalışma Mantığı
 
 Kullanıcı
    |
@@ -122,33 +123,55 @@ Solar Hesaplayıcı      Solarix AI
                       OpenAI API
 
 Frontend tarafındaki kullanıcı işlemleri JavaScript ile yönetilir. Solarix AI istekleri backend üzerinden işlenir ve OpenAI API ile iletişim kurulur.
-API anahtarı bulunmadığında uygulama simülasyon moduna geçerek solar enerji konusunda hazırlanmış cevapları kullanır.
-Kurulum
-Projeyi bilgisayarınıza klonladıktan sonra proje klasörüne gidin:
--git clone https://github.com/MelikeSudeTekin/luminal-energy-ai.git
--cd luminal-energy-ai
-gerekli paketleri yükleyin
--npm install
 
-Ortam Değişkenleri
+API anahtarı bulunmadığında uygulama simülasyon moduna geçerek solar enerji konusunda hazırlanmış cevapları kullanır.
+
+## Kurulum
+
+Projeyi bilgisayarınıza klonladıktan sonra proje klasörüne gidin.
+
+git clone https://github.com/MelikeSudeTekin/luminal-energy-ai.git
+
+cd luminal-energy-ai
+
+Gerekli paketleri yükleyin.
+
+npm install
+
+## Ortam Değişkenleri
+
 Projenin çalışması için .env dosyası oluşturulabilir.
+
 .env.example dosyasındaki yapı kullanılarak gerekli ortam değişkenleri tanımlanmalıdır.
+
 Örnek:
+
 OPENAI_API_KEY=your_api_key_here
 
+Gerçek API anahtarı .env içerisinde tutulmalı ve GitHub'a yüklenmemelidir.
 
-Uygulamayı Çalıştırma
+## Uygulamayı Çalıştırma
+
 Gerekli bağımlılıkları yükledikten sonra:
+
 node server.js
+
 komutu ile backend sunucusu çalıştırılabilir.
+
 Daha sonra uygulama, sunucunun kullandığı yerel adres üzerinden tarayıcıda açılabilir.
 
-Güvenlik
+## Güvenlik
+
 OpenAI API anahtarının frontend tarafında paylaşılmasını önlemek amacıyla API iletişimi backend üzerinden gerçekleştirilecek şekilde tasarlanmıştır.
+
 .env dosyası .gitignore içerisinde tutulmaktadır ve GitHub repository'sine gönderilmemektedir.
+
 node_modules klasörü de repository içerisinde tutulmamakta, gerekli paketler npm install komutu ile yeniden oluşturulmaktadır.
-Geliştirme Alanları
+
+## Geliştirme Alanları
+
 Projenin ilerleyen aşamalarında aşağıdaki özellikler eklenebilir:
+
 - Gerçek güneşlenme ve hava durumu verilerinin sisteme dahil edilmesi
 - Bölgesel enerji üretim tahminleri
 - Kullanıcı hesabı ve geçmiş hesaplamaların saklanması
@@ -158,13 +181,16 @@ Projenin ilerleyen aşamalarında aşağıdaki özellikler eklenebilir:
 - Daha kapsamlı yapay zeka danışmanlığı
 - Mobil uygulama entegrasyonu
 
-Proje Durumu
--Proje, güneş enerjisi çözümleri ve yapay zeka destekli danışmanlık deneyimini tek bir web uygulamasında birleştiren bir prototip olarak geliştirilmiştir.
+## Proje Durumu
 
-Geliştirici:
+Proje, güneş enerjisi çözümleri ve yapay zeka destekli danışmanlık deneyimini tek bir web uygulamasında birleştiren bir prototip olarak geliştirilmiştir.
+
+## Geliştirici
+
 Melike Sude Tekin
 
 Yapay Zeka Operatörlüğü öğrencisi olarak yapay zeka, web teknolojileri ve gerçek dünya problemlerine yönelik yazılım çözümleri üzerine çalışmalar yapıyorum.
 
-Lisans
+## Lisans
+
 Bu proje eğitim ve portföy amacıyla geliştirilmiştir.
